@@ -1,0 +1,2 @@
+# SSD1306
+Dieses Repository beinhaltet Ansteuerungs-Routinen für OLED-Displays mit einem SSD1306 Display-Controller. Die Routinen sind in C für einen PIC18F45K22 geschrieben und mit einem Anwendungsbeispiel samt Font verfügbar. Die Tatsache, dass die Routinen in C geschrieben sind, sollte eine Portierung auf eine andere Plattform ohne Probleme ermöglichen. Weiterführende Informationen findet Ihr auf meiner [Webseite](http://pic-projekte.de/wordpress/?p=3171).
