@@ -1,8 +1,8 @@
 /*******************************************************************************
  * File:        lcd.h
- * Project:     SSD1306 
- * Author:      Nicolas Meyertöns
- * Version:     1.0
+ * Project:     SP18 - I2C OLED Display
+ * Author:      Nicolas MeyertÃ¶ns
+ * Version:     
  * Web:         http://pic-projekte.de
  ******************************************************************************/
 
@@ -72,5 +72,7 @@ void fb_invert(uint8_t status);
 void fb_show();
 void fb_draw_char (uint16_t x, uint16_t y, uint16_t fIndex);
 void fb_draw_string (uint16_t x, uint16_t y, const char *pS);
+
+void fb_draw_string_big (uint16_t x, uint16_t y, const char *pS);
 
 #endif	/* LCD_H */
