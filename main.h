@@ -1,8 +1,8 @@
 /*******************************************************************************
  * File:        main.h
  * Project:     Datalogger (HAW-Hamburg-Projekt)
- * Author:      Nicolas Meyertöns
- * Version:     siehe Defines
+ * Author:      Nicolas MeyertÃ¶ns
+ * Version:     1.1
  * Web:         http://pic-projekte.de
  ******************************************************************************/
 
