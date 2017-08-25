@@ -1,8 +1,8 @@
 /*******************************************************************************
  * File:        lcd.c
- * Project:     SSD1306 
- * Author:      Nicolas Meyertöns
- * Version:     1.0
+ * Project:     SP18 - I2C OLED Display
+ * Author:      Nicolas MeyertÃ¶ns
+ * Version:     
  * Web:         http://pic-projekte.de
  ******************************************************************************/
 
@@ -75,7 +75,7 @@ void lcd_init(void)
 }
 
 /*******************************************************************************
- * Übertragen eines Befehls an das OLED-Display
+ * Ãœbertragen eines Befehls an das OLED-Display
  */
 
 void lcd_sendCommand(uint8_t command)
@@ -106,7 +106,7 @@ void lcd_invert(uint8_t inverted)
 }
 
 /*******************************************************************************
- * Übertragen des Framebuffers an das OLED-Display
+ * Ãœbertragen des Framebuffers an das OLED-Display
  */
 
 void lcd_sendFramebuffer(uint8_t *buffer)
@@ -216,7 +216,7 @@ void fb_drawRectangle(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2, uint8_t fi
 }
 
 /*******************************************************************************
- * Löschen des Framebuffers
+ * LÃ¶schen des Framebuffers
  */
 
 void fb_clear()
@@ -288,4 +288,23 @@ void fb_draw_string (uint16_t x, uint16_t y, const char *pS)
         /* next charachter */
         pS++;
     }
+}
+
+void fb_draw_string_big (uint16_t x, uint16_t y, const char *pS)
+{
+    uint8_t k;
+
+    while(*pS)
+    {
+        for(k=0; k<10; k++)
+        {
+            buffer[( y    << 7) + x + k] = font2[*pS - ' '][k*2  ];
+            buffer[((y+1) << 7) + x + k] = font2[*pS - ' '][k*2+1];
+        }
+        
+        x += 10;
+        
+        /* next charachter */
+        pS++;
+    }    
 }
