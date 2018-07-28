@@ -1,7 +1,7 @@
 /*******************************************************************************
  * File:        peri.h
- * Project:     
- * Author:      Nicolas Meyertöns
+ * Project:     SP18 - I2C OLED Display
+ * Author:      Nicolas Pannwitz
  * Version:     
  * Web:         http://pic-projekte.de
  ******************************************************************************/

@@ -1,7 +1,7 @@
 /*******************************************************************************
  * File:        lcd.h
  * Project:     SP18 - I2C OLED Display
- * Author:      Nicolas Meyertöns
+ * Author:      Nicolas Pannwitz
  * Version:     
  * Web:         http://pic-projekte.de
  ******************************************************************************/
@@ -70,6 +70,7 @@ void fb_drawRectangle(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2, uint8_t fi
 void fb_clear();
 void fb_invert(uint8_t status);
 void fb_show();
+void fb_show_bmp(uint8_t *pBmp);
 void fb_draw_char (uint16_t x, uint16_t y, uint16_t fIndex);
 void fb_draw_string (uint16_t x, uint16_t y, const char *pS);
 

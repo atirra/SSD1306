@@ -1,7 +1,7 @@
 /*******************************************************************************
  * File:        main.c
  * Project:     SP18 - I2C OLED Display
- * Author:      Nicolas Meyertöns
+ * Author:      Nicolas Pannwitz
  * Version:     siehe main.h
  * Web:         http://pic-projekte.de
  ******************************************************************************/
@@ -12,6 +12,7 @@
 #include "main.h"
 #include "lcd.h"
 #include "peri.h"
+#include "bmp.h"
 
 #pragma config FOSC = INTIO67       // Internal oscillator block
 #pragma config PWRTEN = ON          // Power up timer enabled
@@ -60,7 +61,10 @@ void main (void)
     fb_draw_string(15,7,"http://pic-projekte.de/");
 
     /*Den Framebuffer zur Anzeige bringen*/
-    fb_show();
+    //fb_show();
+    
+    /**/
+    fb_show_bmp(bmp_running_men);
     
     /*Endlosschleife*/
     while(1)

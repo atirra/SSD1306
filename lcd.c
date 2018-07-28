@@ -1,7 +1,7 @@
 /*******************************************************************************
  * File:        lcd.c
  * Project:     SP18 - I2C OLED Display
- * Author:      Nicolas Meyertöns
+ * Author:      Nicolas Pannwitz
  * Version:     
  * Web:         http://pic-projekte.de
  ******************************************************************************/
@@ -243,6 +243,11 @@ void fb_invert(uint8_t status)
 void fb_show()
 {
     lcd_sendFramebuffer(buffer);
+}
+
+void fb_show_bmp(uint8_t *pBmp)
+{
+    lcd_sendFramebuffer(pBmp);
 }
 
 /*******************************************************************************
